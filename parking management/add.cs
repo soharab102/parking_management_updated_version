@@ -54,11 +54,11 @@ namespace parking_management
                 con.Open();
 
                 // string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot) VALUES(@u,@v,@e,@s)";
-                string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot, status) VALUES(@u,@v,@e,@s,@st)";
+                string query = "INSERT INTO Parking(ownername, VehicleNumber, EntryTime, slot, status) VALUES(@o,@v,@e,@s,@st)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
-                cmd.Parameters.AddWithValue("@u", textBox1.Text);
+                cmd.Parameters.AddWithValue("@o", textBox1.Text);
 
                 cmd.Parameters.AddWithValue("@v", textBox2.Text.ToUpper());
 
@@ -74,10 +74,11 @@ namespace parking_management
 
                     MessageBox.Show("Data Added Successfully");
                 }
-                catch (SqlException)
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Vehicle already added in database");
-                }
+					//MessageBox.Show("Vehicle already added in database");
+					MessageBox.Show("Database Error: " + ex.Message);
+				}
 
 
                 MessageBox.Show("Data Added Successfully");
