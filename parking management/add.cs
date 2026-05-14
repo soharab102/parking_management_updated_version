@@ -54,7 +54,7 @@ namespace parking_management
                 con.Open();
 
                 // string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot) VALUES(@u,@v,@e,@s)";
-                string query = "INSERT INTO Parking(ownername, VehicleNumber, EntryTime, slot, status) VALUES(@o,@v,@e,@s,@st)";
+                string query = "INSERT INTO Parking(username, ownername, VehicleNumber, EntryTime, slot, status) VALUES(@currentUser,@o,@v,@e,@s,@st)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -68,7 +68,9 @@ namespace parking_management
 
                 cmd.Parameters.AddWithValue("@st", "not paid");
 
-                try
+				cmd.Parameters.AddWithValue("@currentUser", username);
+
+				try
                 {
                     cmd.ExecuteNonQuery();
 

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -74,8 +74,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -86,8 +90,7 @@
               "RelativeToolTip": "parking management\\dashboard.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwCYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T16:09:52.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T16:09:52.938Z"
             },
             {
               "$type": "Document",
@@ -97,7 +100,7 @@
               "RelativeDocumentMoniker": "parking management\\add.cs",
               "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs",
               "RelativeToolTip": "parking management\\add.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAA9wEQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T00:06:40.935Z",
               "EditorCaption": ""
@@ -250,8 +253,7 @@
               "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs [Design]",
               "RelativeToolTip": "parking management\\add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:25:27.038Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-09T15:25:27.038Z"
             },
             {
               "$type": "Document",
@@ -263,8 +265,7 @@
               "RelativeToolTip": "parking management\\Program.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAswBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:36:41.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T17:36:41.654Z"
             }
           ]
         }
