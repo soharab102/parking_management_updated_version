@@ -84,8 +84,6 @@ namespace parking_management
 				}
 
 
-                MessageBox.Show("Data Added Successfully");
-
                 // SHOW ONLY NEWLY ADDED DATA
                 string showQuery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
 

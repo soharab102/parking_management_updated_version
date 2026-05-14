@@ -155,7 +155,10 @@ namespace parking_management
             // Remove BDT text
             string costText = textBoxTotalCost.Text.Replace("BDT", "").Trim();
 
-            using (SqlConnection con = new SqlConnection(conStr))
+			// Update DB exit time
+			UpdateExitTime();
+
+			using (SqlConnection con = new SqlConnection(conStr))
             {
                 con.Open();
 
@@ -213,7 +216,7 @@ namespace parking_management
             if (picker != null)
             {
                 picker.Format = DateTimePickerFormat.Custom;
-                picker.CustomFormat = "HH:mm:ss"; // 24-hour format with seconds
+                picker.CustomFormat = "hh:mm:ss tt"; // 12-hour format with seconds
             }
         }
         private void calculate_Click(object sender, EventArgs e)
@@ -246,9 +249,6 @@ namespace parking_management
 
                 // User selected exit time
                 DateTime exitTime = dateTimePicker1.Value;
-
-                // Update DB exit time
-                UpdateExitTime();
 
                 TimeSpan diff = exitTime - entryTime;
 
