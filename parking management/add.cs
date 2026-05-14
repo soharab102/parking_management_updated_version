@@ -15,6 +15,7 @@ namespace parking_management
     public partial class add : Form
     {
         public string username;
+        private DateTimePicker timePicker;
 
         string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         public add()
@@ -42,7 +43,7 @@ namespace parking_management
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "" ||
-         textBox4.Text == "" || comboBox1.Text == "")
+		 dateTimePickerStart.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("Please Fill All Fields");
             }
@@ -62,7 +63,7 @@ namespace parking_management
 
                 cmd.Parameters.AddWithValue("@v", textBox2.Text.ToUpper());
 
-                cmd.Parameters.AddWithValue("@e", textBox4.Text);
+                cmd.Parameters.AddWithValue("@e", DateTime.Now);
 
                 cmd.Parameters.AddWithValue("@s", comboBox1.Text);
 
@@ -100,7 +101,6 @@ namespace parking_management
 
                 textBox1.Clear();
                 textBox2.Clear();
-                textBox4.Clear();
 
                 comboBox1.SelectedIndex = -1;
 
