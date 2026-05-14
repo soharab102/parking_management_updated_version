@@ -51,11 +51,6 @@ namespace parking_management
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "")
@@ -79,7 +74,7 @@ namespace parking_management
 
                 if (count > 0)
                 {
-                    MessageBox.Show("Login Successful");
+                    //MessageBox.Show("Login Successful");
 
                     dashboard d = new dashboard();
 

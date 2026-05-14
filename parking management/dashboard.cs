@@ -22,16 +22,19 @@ namespace parking_management
             InitializeComponent();
 
         }
+
         // LOAD ALL DATA
         void LoadData()
         {
             SqlConnection con = new SqlConnection(cs);
 
-            string query = "SELECT * FROM Parking";
+            string query = "SELECT * FROM Parking WHERE username = @username";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
 
-            DataTable dt = new DataTable();
+			da.SelectCommand.Parameters.AddWithValue("@username", username);
+
+			DataTable dt = new DataTable();
 
             da.Fill(dt);
 

@@ -85,7 +85,7 @@ namespace parking_management
 					// Check if paid
 					if (status != "paid")
 					{
-						MessageBox.Show("Pay first");
+						MessageBox.Show("Make Payment First to Delete Record");
 						return;
 					}
 
