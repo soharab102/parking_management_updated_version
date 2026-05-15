@@ -36,6 +36,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.lblStatus = new System.Windows.Forms.Label();
-			this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -80,7 +80,7 @@
 			this.textBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(228, 26);
-			this.textBox2.TabIndex = 0;
+			this.textBox2.TabIndex = 1;
 			// 
 			// label2
 			// 
@@ -149,6 +149,13 @@
 			this.panel1.Size = new System.Drawing.Size(650, 191);
 			this.panel1.TabIndex = 2;
 			// 
+			// dateTimePickerStart
+			// 
+			this.dateTimePickerStart.Location = new System.Drawing.Point(58, 132);
+			this.dateTimePickerStart.Name = "dateTimePickerStart";
+			this.dateTimePickerStart.Size = new System.Drawing.Size(237, 20);
+			this.dateTimePickerStart.TabIndex = 2;
+			// 
 			// comboBox1
 			// 
 			this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +164,7 @@
 			this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(228, 28);
-			this.comboBox1.TabIndex = 2;
+			this.comboBox1.TabIndex = 3;
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// label7
@@ -262,13 +269,6 @@
 			this.lblStatus.Size = new System.Drawing.Size(56, 20);
 			this.lblStatus.TabIndex = 5;
 			this.lblStatus.Text = "Status";
-			// 
-			// dateTimePickerStart
-			// 
-			this.dateTimePickerStart.Location = new System.Drawing.Point(58, 132);
-			this.dateTimePickerStart.Name = "dateTimePickerStart";
-			this.dateTimePickerStart.Size = new System.Drawing.Size(237, 20);
-			this.dateTimePickerStart.TabIndex = 3;
 			// 
 			// add
 			// 
