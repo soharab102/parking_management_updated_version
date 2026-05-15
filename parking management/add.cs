@@ -69,12 +69,12 @@ namespace parking_management
 
 				// string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot) VALUES(@u,@v,@e,@s)";
 				string query = "INSERT INTO Parking(username, ownername, VehicleNumber, EntryTime, slot, status) VALUES(@currentUser,@o,@v,@e,@s,@st)";
-                string slotQuery = "SELECT COUNT(*) FROM ParkingSlotCounter WHERE slot=@s";
+                string slotQuery = "SELECT VehicleCount FROM ParkingSlotCounter WHERE slot=@slot";
 
                 SqlCommand slotCmd = new SqlCommand(slotQuery, con);
-                slotCmd.Parameters.AddWithValue("@s", comboBox1.Text);
+                slotCmd.Parameters.AddWithValue("@slot", comboBox1.Text);
                 int slotCount = (int)slotCmd.ExecuteScalar();
-                if(slotCount > 20)
+                if(slotCount >= 20)
                 {
                     MessageBox.Show("This slot is full");
                     return;
