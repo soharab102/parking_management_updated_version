@@ -54,8 +54,21 @@ namespace parking_management
 
                 con.Open();
 
-                // string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot) VALUES(@u,@v,@e,@s)";
-                string query = "INSERT INTO Parking(username, ownername, VehicleNumber, EntryTime, slot, status) VALUES(@currentUser,@o,@v,@e,@s,@st)";
+
+				// Check if the vehicle number already exists in the database
+				string checkQuery = "SELECT COUNT(*) FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND status='not paid'";
+                SqlCommand checkCmd = new SqlCommand(checkQuery, con);
+                checkCmd.Parameters.AddWithValue("@v", textBox2.Text);
+                int count = (int)checkCmd.ExecuteScalar();
+                if (count > 0)
+                {
+                    MessageBox.Show("Vehicle already added in database");
+                    return;
+				}
+
+
+				// string query = "INSERT INTO Parking(username, VehicleNumber, EntryTime, slot) VALUES(@u,@v,@e,@s)";
+				string query = "INSERT INTO Parking(username, ownername, VehicleNumber, EntryTime, slot, status) VALUES(@currentUser,@o,@v,@e,@s,@st)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -85,7 +98,7 @@ namespace parking_management
 
 
                 // SHOW ONLY NEWLY ADDED DATA
-                string showQuery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
+                string showQuery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND status='not paid'";
 
                 SqlDataAdapter da = new SqlDataAdapter(showQuery, con);
 
