@@ -100,7 +100,7 @@ namespace parking_management
         {
             SqlConnection con = new SqlConnection(cs);
 
-            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
+            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) OR UPPER(OwnerName)=UPPER(@v)";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
 
@@ -112,14 +112,11 @@ namespace parking_management
 
             dataGridView1.DataSource = dt;
 
-            if (dt.Rows.Count > 0)
-            {
-                MessageBox.Show("Vehicle Found");
-            }
-            else
+            if (dt.Rows.Count <= 0)
             {
                 MessageBox.Show("Vehicle Not Found");
             }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
