@@ -166,5 +166,25 @@ namespace parking_management
             textBox1.Clear();
             LoadData();
         }
-    }
+
+
+		// Placeholder text for search box
+		private void textBox1_Enter(object sender, EventArgs e)
+		{
+            if(textBox1.Text == "  e.g DHA-2626")
+            {
+				textBox1.Text = "";
+				textBox1.ForeColor = Color.Black;
+			}
+		}
+
+		private void textBox1_Leave(object sender, EventArgs e)
+		{
+            if(textBox1.Text =="")
+            {
+				textBox1.Text = "  e.g DHA-2626";
+				textBox1.ForeColor = Color.Gray;
+			}
+		}
+	}
 }

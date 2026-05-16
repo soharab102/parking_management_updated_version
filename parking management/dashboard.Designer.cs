@@ -278,12 +278,16 @@
 			this.textBox1.BackColor = System.Drawing.Color.AliceBlue;
 			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
 			this.textBox1.Location = new System.Drawing.Point(439, 308);
 			this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(374, 33);
 			this.textBox1.TabIndex = 3;
+			this.textBox1.Text = "  e.g DHA-2626";
+			this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+			this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
 			// 
 			// button5
 			// 
