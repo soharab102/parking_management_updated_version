@@ -7,9 +7,6 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace parking_management
 {
-
-
-
     public partial class Form1 : Form
     {
         public string username;
@@ -35,9 +32,6 @@ namespace parking_management
 
         }
         
-
-
-
         private void enter_Click(object sender, EventArgs e)
         {
             string vehicle = textBox1.Text.ToUpper();
@@ -112,7 +106,17 @@ namespace parking_management
             {
                 con.Open();
 
-                string query = @"UPDATE Parking
+                string SlotQuery = @"SELECT slot from Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND (status='not paid' OR status IS NULL)";
+                SqlCommand slotCmd = new SqlCommand(SlotQuery, con);
+				slotCmd.Parameters.AddWithValue("@v", vehicle);
+                string slot = (string)slotCmd.ExecuteScalar();
+
+                string decreaseSlotCntQuery = @"UPDATE ParkingSlotCounter SET VehicleCount = VehicleCount - 1 WHERE slot = @s";
+                SqlCommand decreaseSlotCmd = new SqlCommand(decreaseSlotCntQuery, con);
+				decreaseSlotCmd.Parameters.AddWithValue("@s", slot);
+				decreaseSlotCmd.ExecuteNonQuery();
+
+				string query = @"UPDATE Parking
                          SET TotalCost=@cost,
                              status='paid'
                          WHERE UPPER(VehicleNumber)=UPPER(@v)
@@ -126,6 +130,8 @@ namespace parking_management
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Payment Successful!");
+
+
 
                 // Refresh Grid
                 string refreshQuery = @"SELECT TOP 1 *
