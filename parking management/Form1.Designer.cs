@@ -69,13 +69,12 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(919, 108);
 			this.panel1.TabIndex = 5;
-			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
 			// vehicleNo
 			// 
 			this.vehicleNo.AutoSize = true;
 			this.vehicleNo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.vehicleNo.Location = new System.Drawing.Point(19, 38);
+			this.vehicleNo.Location = new System.Drawing.Point(32, 44);
 			this.vehicleNo.Name = "vehicleNo";
 			this.vehicleNo.Size = new System.Drawing.Size(102, 18);
 			this.vehicleNo.TabIndex = 0;
@@ -98,13 +97,16 @@
 			// 
 			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.ForeColor = System.Drawing.Color.Black;
-			this.textBox1.Location = new System.Drawing.Point(164, 36);
+			this.textBox1.ForeColor = System.Drawing.Color.Gray;
+			this.textBox1.Location = new System.Drawing.Point(144, 36);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(584, 36);
-			this.textBox1.TabIndex = 1;
+			this.textBox1.Size = new System.Drawing.Size(604, 36);
+			this.textBox1.TabIndex = 10;
+			this.textBox1.Text = "  e.g DHA-2626";
 			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+			this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
 			// 
 			// panel2
 			// 
@@ -165,7 +167,6 @@
 			this.totalCost.Size = new System.Drawing.Size(102, 18);
 			this.totalCost.TabIndex = 0;
 			this.totalCost.Text = "Total Cost  :\r\n";
-			this.totalCost.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// panel3
 			// 
@@ -214,7 +215,6 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(270, 26);
 			this.comboBox1.TabIndex = 3;
-			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// confirm
 			// 

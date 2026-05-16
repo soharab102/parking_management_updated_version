@@ -27,37 +27,17 @@ namespace parking_management
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //textBox1.Text = "DHA-1234";
-            textBox1.ForeColor = Color.Gray;
-            isPlaceholder = true;
-
-
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // If placeholder is active and user starts typing
-            if (isPlaceholder)
-            {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
-                isPlaceholder = false;
-                return;
-            }
-
-            // If user deletes everything → restore placeholder
-            if (textBox1.Text == "")
-            {
-                isPlaceholder = true;
-                textBox1.Text = "DHA-1234";
-                textBox1.ForeColor = Color.Gray;
-
-                // Keep cursor at start
-                textBox1.SelectionStart = 0;
-            }
 
         }
+        
+
+
+
         private void enter_Click(object sender, EventArgs e)
         {
             string vehicle = textBox1.Text.ToUpper();
@@ -95,10 +75,6 @@ namespace parking_management
         }
 
 
-
-
-
-
         private void UpdateExitTime()
         {
             string vehicle = textBox1.Text.ToUpper();
@@ -120,32 +96,6 @@ namespace parking_management
                 cmd.ExecuteNonQuery();
             }
         }
-
-
-
-
-
-
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void confirm_Click(object sender, EventArgs e)
@@ -195,19 +145,6 @@ namespace parking_management
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-
-        }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
@@ -305,5 +242,23 @@ namespace parking_management
           //  this.Close();
         }
 
+		// Placeholder text handling for search box
+		private void textBox1_Enter(object sender, EventArgs e) 
+		{
+            if(textBox1.Text == "  e.g DHA-2626")
+            {
+				textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+			}
+		}
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "  e.g DHA-2626";
+                textBox1.ForeColor = Color.Gray;
+            }
+        }
 	}
 }
