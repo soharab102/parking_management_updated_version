@@ -46,7 +46,7 @@
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button5 = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.lblRateDisply = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -303,18 +303,18 @@
 			this.button5.UseVisualStyleBackColor = false;
 			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
-			// label1
+			// lblRateDisply
 			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.Navy;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-			this.label1.Location = new System.Drawing.Point(488, 254);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(288, 26);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Current Rate : 100BDT /hour";
+			this.lblRateDisply.AutoSize = true;
+			this.lblRateDisply.BackColor = System.Drawing.Color.Navy;
+			this.lblRateDisply.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRateDisply.ForeColor = System.Drawing.Color.Cornsilk;
+			this.lblRateDisply.Location = new System.Drawing.Point(416, 254);
+			this.lblRateDisply.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblRateDisply.Name = "lblRateDisply";
+			this.lblRateDisply.Size = new System.Drawing.Size(288, 26);
+			this.lblRateDisply.TabIndex = 5;
+			this.lblRateDisply.Text = "Current Rate : 100BDT /hour";
 			// 
 			// label2
 			// 
@@ -498,7 +498,7 @@
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblRateDisply);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.dataGridView1);
@@ -543,8 +543,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRateDisply;
+		private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;

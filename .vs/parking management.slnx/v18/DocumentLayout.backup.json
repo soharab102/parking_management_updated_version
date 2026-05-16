@@ -3,40 +3,47 @@
   "WorkspaceRootPath": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|parking management||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -65,6 +72,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|k:\\c#\\final project\\final version\\parking management\\parking management\\parking management\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{F70AC835-4A9C-4EA9-A5FE-D1D3745C8119}|parking management\\parking management.csproj|solutionrelative:parking management\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +85,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,32 +93,100 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "login.cs",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs",
-              "RelativeDocumentMoniker": "parking management\\login.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs*",
-              "RelativeToolTip": "parking management\\login.cs*",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAuwE0AAABNAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "dashboard.cs",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
+              "RelativeDocumentMoniker": "parking management\\dashboard.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
+              "RelativeToolTip": "parking management\\dashboard.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T17:29:34.654Z",
+              "WhenOpened": "2026-05-16T19:09:17.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dashboard.cs [Design]",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
+              "RelativeDocumentMoniker": "parking management\\dashboard.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs [Design]",
+              "RelativeToolTip": "parking management\\dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T19:09:10.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "parking management",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\parking management.csproj",
+              "RelativeDocumentMoniker": "parking management\\parking management.csproj",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\parking management.csproj",
+              "RelativeToolTip": "parking management\\parking management.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-16T18:51:03.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs",
-              "RelativeDocumentMoniker": "parking management\\login.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs [Design]*",
-              "RelativeToolTip": "parking management\\login.cs [Design]*",
+              "DocumentIndex": 3,
+              "Title": "admin.Designer.cs",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.Designer.cs",
+              "RelativeDocumentMoniker": "parking management\\admin.Designer.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.Designer.cs",
+              "RelativeToolTip": "parking management\\admin.Designer.cs",
+              "ViewState": "AgIAAAICAAAAAAAAAAAawBcCAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T17:29:31.264Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T18:40:58.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
+              "Title": "admin.cs [Design]",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
+              "RelativeDocumentMoniker": "parking management\\admin.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs [Design]",
+              "RelativeToolTip": "parking management\\admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T18:40:56.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "admin.cs",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
+              "RelativeDocumentMoniker": "parking management\\admin.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
+              "RelativeToolTip": "parking management\\admin.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAhwLsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T18:39:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "login.cs",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs",
+              "RelativeDocumentMoniker": "parking management\\login.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs",
+              "RelativeToolTip": "parking management\\login.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:29:34.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs",
+              "RelativeDocumentMoniker": "parking management\\login.cs",
+              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\login.cs [Design]",
+              "RelativeToolTip": "parking management\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:29:31.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "delete.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\delete.cs",
               "RelativeDocumentMoniker": "parking management\\delete.cs",
@@ -119,57 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "admin.cs",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
-              "RelativeDocumentMoniker": "parking management\\admin.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
-              "RelativeToolTip": "parking management\\admin.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAnwA8AAACNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:25:05.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "admin.cs [Design]",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs",
-              "RelativeDocumentMoniker": "parking management\\admin.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\admin.cs [Design]",
-              "RelativeToolTip": "parking management\\admin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:25:02.977Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dashboard.cs [Design]",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
-              "RelativeDocumentMoniker": "parking management\\dashboard.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs [Design]",
-              "RelativeToolTip": "parking management\\dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T07:34:07.773Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dashboard.cs",
-              "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
-              "RelativeDocumentMoniker": "parking management\\dashboard.cs",
-              "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\dashboard.cs",
-              "RelativeToolTip": "parking management\\dashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAACSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T07:36:20.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "update.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\update.cs",
               "RelativeDocumentMoniker": "parking management\\update.cs",
@@ -181,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "update.cs [Design]",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\update.cs",
               "RelativeDocumentMoniker": "parking management\\update.cs",
@@ -192,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "parking management\\Form1.Designer.cs",
@@ -204,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\Program.cs",
               "RelativeDocumentMoniker": "parking management\\Program.cs",
@@ -212,12 +241,11 @@
               "RelativeToolTip": "parking management\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T07:34:15.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T07:34:15.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Form1.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\Form1.cs",
               "RelativeDocumentMoniker": "parking management\\Form1.cs",
@@ -229,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\Form1.cs",
               "RelativeDocumentMoniker": "parking management\\Form1.cs",
@@ -240,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "add.cs",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs",
               "RelativeDocumentMoniker": "parking management\\add.cs",
@@ -248,12 +276,11 @@
               "RelativeToolTip": "parking management\\add.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAowGIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T16:27:42.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T16:27:42.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "delete.cs [Design]",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\delete.cs",
               "RelativeDocumentMoniker": "parking management\\delete.cs",
@@ -264,15 +291,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "add.cs [Design]",
               "DocumentMoniker": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs",
               "RelativeDocumentMoniker": "parking management\\add.cs",
               "ToolTip": "K:\\C#\\Final Project\\Final Version\\parking management\\parking management\\parking management\\add.cs [Design]",
               "RelativeToolTip": "parking management\\add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:25:27.038Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-09T15:25:27.038Z"
             }
           ]
         }

@@ -47,7 +47,13 @@ namespace parking_management
 
             LoadData();
             SlotCalculation();
-        }
+
+			// Display current parking rate
+			decimal currrentRate = Properties.Settings.Default.ParkingRate;
+
+            lblRateDisply.Text = $"Current Parking Rate: {currrentRate} BDT per hour";
+
+		}
 
         private void button1_Click(object sender, EventArgs e)//Add booking
         {

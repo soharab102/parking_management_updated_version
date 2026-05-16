@@ -78,6 +78,7 @@ namespace parking_management
                     if(textBox1.Text == "admin" && textBox2.Text == "admin123")
 					{
 						admin ad= new admin();
+                        ad.username = textBox1.Text;
                         ad.Show();
 
                         this.Hide();
@@ -94,7 +95,6 @@ namespace parking_management
 					}
 
 				}
-
                 else
                 {
                     MessageBox.Show("Account Not Found. Please Register First");
