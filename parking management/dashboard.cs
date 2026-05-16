@@ -106,11 +106,12 @@ namespace parking_management
         {
             SqlConnection con = new SqlConnection(cs);
 
-            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) OR UPPER(OwnerName)=UPPER(@v)";
+            string query = "SELECT * FROM Parking WHERE (UPPER(VehicleNumber)=UPPER(@v) OR UPPER(OwnerName)=UPPER(@v)) AND username = @u";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
 
             da.SelectCommand.Parameters.AddWithValue("@v", textBox1.Text);
+            da.SelectCommand.Parameters.AddWithValue("@u", username);
 
             DataTable dt = new DataTable();
 

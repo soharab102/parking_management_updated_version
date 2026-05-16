@@ -309,12 +309,12 @@
 			this.lblRateDisply.BackColor = System.Drawing.Color.Navy;
 			this.lblRateDisply.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblRateDisply.ForeColor = System.Drawing.Color.Cornsilk;
-			this.lblRateDisply.Location = new System.Drawing.Point(416, 254);
+			this.lblRateDisply.Location = new System.Drawing.Point(427, 251);
 			this.lblRateDisply.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lblRateDisply.Name = "lblRateDisply";
-			this.lblRateDisply.Size = new System.Drawing.Size(288, 26);
+			this.lblRateDisply.Size = new System.Drawing.Size(399, 26);
 			this.lblRateDisply.TabIndex = 5;
-			this.lblRateDisply.Text = "Current Rate : 100BDT /hour";
+			this.lblRateDisply.Text = "Current Parking Rate: 100 BDT per hour";
 			// 
 			// label2
 			// 

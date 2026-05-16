@@ -32,8 +32,6 @@ namespace parking_management
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
 
-			da.SelectCommand.Parameters.AddWithValue("@username", username);
-
 			DataTable dt = new DataTable();
 
             da.Fill(dt);

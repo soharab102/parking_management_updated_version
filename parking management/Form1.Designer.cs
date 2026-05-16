@@ -219,6 +219,7 @@
 			// confirm
 			// 
 			this.confirm.BackColor = System.Drawing.Color.DarkGreen;
+			this.confirm.Enabled = false;
 			this.confirm.ForeColor = System.Drawing.Color.White;
 			this.confirm.Location = new System.Drawing.Point(224, 139);
 			this.confirm.Name = "confirm";

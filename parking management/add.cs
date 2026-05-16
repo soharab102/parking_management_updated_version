@@ -135,17 +135,25 @@ namespace parking_management
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // back button
         {
-            dashboard d = new dashboard();
-            d.username=username;
-            d.Show();
+			if (username == "admin")
+			{
+				admin ad = new admin();
+				ad.Show();
+				this.Hide();
+				return;
+			}
+			dashboard d = new dashboard();
+			d.username = username;
 
-            this.Hide();
-            //this.Close();
-        }
+			d.Show();
 
-        private void add_Load(object sender, EventArgs e)
+			this.Hide();
+			//this.Close();
+		}
+
+		private void add_Load(object sender, EventArgs e)
         {
             comboBox1.Items.Add("A");
             comboBox1.Items.Add("B");

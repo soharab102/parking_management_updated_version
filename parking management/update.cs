@@ -116,14 +116,22 @@ namespace parking_management
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // back button
         {
-            dashboard d = new dashboard();
-            d.username=username;
-            d.Show();
+			if (username == "admin")
+			{
+				admin ad = new admin();
+				ad.Show();
+				this.Hide();
+				return;
+			}
+			dashboard d = new dashboard();
+			d.username = username;
 
-           this.Hide();
-               // this.Close();
-        }
-    }
+			d.Show();
+
+			this.Hide();
+			//this.Close();
+		}
+	}
 }

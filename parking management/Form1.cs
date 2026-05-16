@@ -154,7 +154,7 @@ namespace parking_management
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            // Fix: Cast sender to DateTimePicker before accessing Format and CustomFormat
+            // Cast sender to DateTimePicker before accessing Format and CustomFormat
             DateTimePicker picker = sender as DateTimePicker;
             if (picker != null)
             {
@@ -166,7 +166,9 @@ namespace parking_management
         {
             string vehicle = textBox1.Text.ToUpper();
 
-            using (SqlConnection con = new SqlConnection(conStr))
+            confirm.Enabled = true; // Enable confirm button when calculate is clicked
+
+			using (SqlConnection con = new SqlConnection(conStr))
             {
                 con.Open();
 
@@ -198,7 +200,7 @@ namespace parking_management
                // double hours = Math.Ceiling(diff.TotalHours);
                 double hours =diff.TotalHours;
 
-                double rate = 100;
+                double rate = (double)Properties.Settings.Default.ParkingRate;
 
                 double total = hours * rate;
 
