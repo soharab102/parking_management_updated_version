@@ -268,3 +268,4 @@ K:\C#\Final Project\Final Version\parking management\parking management\parking 
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking .54C6CBDD.Up2Date
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking management.exe
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking management.pdb
+K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking_management.admin.resources

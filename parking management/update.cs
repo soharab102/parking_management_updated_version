@@ -14,9 +14,7 @@ namespace parking_management
 {
     public partial class update : Form
     {
-
-
-       public  string username;
+        public  string username;
         string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public update()
@@ -53,14 +51,12 @@ namespace parking_management
             if (dt.Rows.Count > 0)
             {
                 // SHOW DATA IN UPDATE FIELDS
+                textBox1.Text = dt.Rows[0]["ownername"].ToString();
 
-                textBox1.Text = dt.Rows[0]["username"].ToString();
-
-                textBox3.Text = dt.Rows[0]["EntryTime"].ToString();
+                dateTimePicker1.Text = dt.Rows[0]["EntryTime"].ToString();
 
                 comboBox1.Text = dt.Rows[0]["slot"].ToString();
             }
-
             else
             {
                 MessageBox.Show("Vehicle Not Found");
@@ -70,7 +66,7 @@ namespace parking_management
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox3.Text == "" ||
+            if (textBox1.Text == "" || dateTimePicker1.Text == "" ||
          comboBox1.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("Please Fill All Fields");
@@ -82,15 +78,15 @@ namespace parking_management
 
                 con.Open();
 
-                string query = "UPDATE Parking SET username = @u, EntryTime = @e, slot = @s, ExitTime = NULL, TotalCost = NULL, status = NULL WHERE VehicleNumber = @v";
+                string query = "UPDATE Parking SET ownername = @u, EntryTime = @e, slot = @s, ExitTime = NULL, TotalCost = NULL, status = NULL WHERE VehicleNumber = @v";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
-                // USERNAME
+                // OWNER NAME
                 cmd.Parameters.AddWithValue("@u", textBox1.Text);
 
                 // ENTRY TIME
-                cmd.Parameters.AddWithValue("@e", textBox3.Text);
+                cmd.Parameters.AddWithValue("@e", dateTimePicker1.Text);
 
                 // SLOT
                 cmd.Parameters.AddWithValue("@s", comboBox1.Text);

@@ -75,16 +75,25 @@ namespace parking_management
                 if (count > 0)
                 {
                     //MessageBox.Show("Login Successful");
+                    if(textBox1.Text == "admin" && textBox2.Text == "admin123")
+					{
+						admin ad= new admin();
+                        ad.Show();
 
-                    dashboard d = new dashboard();
+                        this.Hide();
+					}
+                    else{
+						dashboard d = new dashboard();
 
-                    d.username = textBox1.Text;
+						d.username = textBox1.Text;
 
-                    d.Show();
+						d.Show();
 
-                    this.Hide();
-                    //this.Close();
-                }
+						this.Hide();
+						//this.Close();
+					}
+
+				}
 
                 else
                 {

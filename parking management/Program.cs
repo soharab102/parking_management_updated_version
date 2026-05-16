@@ -21,13 +21,13 @@ namespace parking_management
 
             // Application.Run(new register());
 
-            //Application.Run(new login());
+            Application.Run(new login());
 
             //Application.Run(new dashboard());
-             Application.Run(new Form1());
+            //Application.Run(new Form1());
             //Application.Run(new delete());
             //Application.Run(new add());
-           // Application.Run(new update());
+            //Application.Run(new update());
 
         }
     }
