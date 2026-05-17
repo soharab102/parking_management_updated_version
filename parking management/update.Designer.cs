@@ -32,9 +32,9 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.lblVehicleNumber = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.tbxVehicleNumber = new System.Windows.Forms.TextBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -98,33 +98,23 @@
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Start Time";
 			// 
-			// label5
+			// lblVehicleNumber
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(39, 139);
-			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(37, 20);
-			this.label5.TabIndex = 0;
-			this.label5.Text = "Slot";
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(162, 136);
-			this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(92, 28);
-			this.comboBox1.TabIndex = 2;
+			this.lblVehicleNumber.AutoSize = true;
+			this.lblVehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblVehicleNumber.Location = new System.Drawing.Point(39, 134);
+			this.lblVehicleNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblVehicleNumber.Name = "lblVehicleNumber";
+			this.lblVehicleNumber.Size = new System.Drawing.Size(121, 20);
+			this.lblVehicleNumber.TabIndex = 0;
+			this.lblVehicleNumber.Text = "Vehicle Number";
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.LightGray;
+			this.panel1.Controls.Add(this.tbxVehicleNumber);
 			this.panel1.Controls.Add(this.dateTimePicker1);
-			this.panel1.Controls.Add(this.comboBox1);
-			this.panel1.Controls.Add(this.label5);
+			this.panel1.Controls.Add(this.lblVehicleNumber);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.textBox1);
 			this.panel1.Controls.Add(this.label2);
@@ -133,6 +123,13 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(635, 198);
 			this.panel1.TabIndex = 3;
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Location = new System.Drawing.Point(162, 79);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
+			this.dateTimePicker1.TabIndex = 4;
 			// 
 			// label6
 			// 
@@ -261,12 +258,14 @@
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Parking Management System";
 			// 
-			// dateTimePicker1
+			// tbxVehicleNumber
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(162, 79);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
-			this.dateTimePicker1.TabIndex = 4;
+			this.tbxVehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbxVehicleNumber.Location = new System.Drawing.Point(162, 129);
+			this.tbxVehicleNumber.Multiline = true;
+			this.tbxVehicleNumber.Name = "tbxVehicleNumber";
+			this.tbxVehicleNumber.Size = new System.Drawing.Size(220, 30);
+			this.tbxVehicleNumber.TabIndex = 5;
 			// 
 			// update
 			// 
@@ -298,9 +297,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblVehicleNumber;
+		private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
@@ -312,5 +310,6 @@
         private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.TextBox tbxVehicleNumber;
 	}
 }

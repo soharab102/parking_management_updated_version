@@ -18,21 +18,66 @@ namespace parking_management
         public Form1()
         {
             InitializeComponent();
-            comboBox1.Items.AddRange(new string[] { "Bkash", "Naghad", "Card" });
+            comboBox1.Items.AddRange(new string[] { "Bkash", "Nagad", "Card" });
             comboBox1.SelectedIndex = 0;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            listBox1.Visible = false; //***
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //***
+            if(textBox1.Text == "")
+            {
+				// clear listbox and hide
+				listBox1.Items.Clear();
+				listBox1.Visible = false;
+				return;
 
-        }
-        
-        private void enter_Click(object sender, EventArgs e)
+			}
+
+			// show listbox
+            listBox1.Visible = true;
+            listBox1.Items.Clear();
+            string query = @"SELECT VehicleNumber
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL)
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+
+			using (SqlConnection con = new SqlConnection(conStr))
+			{
+				SqlCommand cmd = new SqlCommand(query, con);
+
+				cmd.Parameters.AddWithValue("@v", "%" + textBox1.Text + "%");
+
+				con.Open();
+
+				SqlDataReader dr = cmd.ExecuteReader();
+
+				while (dr.Read())
+				{
+					listBox1.Items.Add(
+						dr["VehicleNumber"].ToString()
+					);
+				}
+			}
+
+			if (listBox1.Items.Count > 0)
+			{
+				listBox1.Visible = true;
+			}
+			else
+			{
+				listBox1.Visible = false;
+			}
+			//***
+		}
+
+		private void enter_Click(object sender, EventArgs e)
         {
             string vehicle = textBox1.Text.ToUpper();
 
@@ -58,8 +103,11 @@ namespace parking_management
                 {
                     dataGridView1.DataSource = dt;
 
-                    // Show exit time picker
-                    dateTimePicker1.Value = DateTime.Now;
+					// Hide listbox after selection
+                    listBox1.Visible = false;
+
+					// Show exit time picker
+					dateTimePicker1.Value = DateTime.Now;
                 }
                 else
                 {
@@ -111,6 +159,7 @@ namespace parking_management
 				slotCmd.Parameters.AddWithValue("@v", vehicle);
                 string slot = (string)slotCmd.ExecuteScalar();
 
+                // Decrease slot count after payment
                 string decreaseSlotCntQuery = @"UPDATE ParkingSlotCounter SET VehicleCount = VehicleCount - 1 WHERE slot = @s";
                 SqlCommand decreaseSlotCmd = new SqlCommand(decreaseSlotCntQuery, con);
 				decreaseSlotCmd.Parameters.AddWithValue("@s", slot);
@@ -118,18 +167,21 @@ namespace parking_management
 
 				string query = @"UPDATE Parking
                          SET TotalCost=@cost,
-                             status='paid'
+                             status='paid', PaymentMethod=@pm
                          WHERE UPPER(VehicleNumber)=UPPER(@v)
                          AND (status='not paid' OR status IS NULL)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@cost", costText);
+                cmd.Parameters.AddWithValue("@pm", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@v", vehicle);
 
-                cmd.ExecuteNonQuery();
+                int v = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Payment Successful!");
+				cmd.ExecuteNonQuery();
+
+                //MessageBox.Show("Payment Successful!");
 
 
 
@@ -149,7 +201,29 @@ namespace parking_management
 
                 dataGridView1.DataSource = dt;
             }
-        }
+
+			DialogResult result = MessageBox.Show("Payment successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(result == DialogResult.OK)
+            {
+				if(username == "admin")
+			    {
+					admin ad = new admin();
+					ad.Show();
+					this.Hide();
+					return;
+				}
+				dashboard d = new dashboard();
+				d.username = username;
+
+				d.Show();
+
+				this.Hide();
+				//this.Close();
+
+			}
+
+
+		}
 
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
@@ -240,15 +314,23 @@ namespace parking_management
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // back button
         {
-            dashboard d = new dashboard();
-            d.username = username;
+			if (username == "admin")
+			{
+				admin ad = new admin();
+				ad.Show();
+				this.Hide();
+				return;
+			}
+			dashboard d = new dashboard();
+			d.username = username;
 
-            d.Show();
-            this.Hide();
-          //  this.Close();
-        }
+			d.Show();
+
+			this.Hide();
+			//this.Close();
+		}
 
 		// Placeholder text handling for search box
 		private void textBox1_Enter(object sender, EventArgs e) 

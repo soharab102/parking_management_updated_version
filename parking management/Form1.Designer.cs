@@ -49,6 +49,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -239,7 +240,7 @@
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(919, 50);
+			this.dataGridView1.Size = new System.Drawing.Size(919, 56);
 			this.dataGridView1.TabIndex = 8;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
@@ -249,7 +250,7 @@
 			this.label1.BackColor = System.Drawing.Color.PaleGoldenrod;
 			this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-			this.label1.Location = new System.Drawing.Point(391, 202);
+			this.label1.Location = new System.Drawing.Point(39, 216);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(204, 26);
 			this.label1.TabIndex = 5;
@@ -258,6 +259,7 @@
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.Silver;
+			this.panel4.Controls.Add(this.listBox1);
 			this.panel4.Controls.Add(this.label3);
 			this.panel4.Controls.Add(this.label1);
 			this.panel4.Controls.Add(this.dataGridView1);
@@ -300,6 +302,16 @@
 			this.label2.Size = new System.Drawing.Size(325, 43);
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Parking Management System";
+			// 
+			// listBox1
+			// 
+			this.listBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 15;
+			this.listBox1.Location = new System.Drawing.Point(180, 139);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(605, 49);
+			this.listBox1.TabIndex = 11;
 			// 
 			// Form1
 			// 
@@ -354,6 +366,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-    }
+		private System.Windows.Forms.ListBox listBox1;
+	}
 }
 

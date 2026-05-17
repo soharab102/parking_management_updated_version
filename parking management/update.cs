@@ -24,11 +24,11 @@ namespace parking_management
 
         private void update_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("A");
-            comboBox1.Items.Add("B");
-            comboBox1.Items.Add("C");
-            comboBox1.Items.Add("D");
-            comboBox1.Items.Add("E");
+            //comboBox1.Items.Add("A");
+            //comboBox1.Items.Add("B");
+            //comboBox1.Items.Add("C");
+            //comboBox1.Items.Add("D");
+            //comboBox1.Items.Add("E");
         }
 
         private void button1_Click(object sender, EventArgs e) // search button
@@ -57,7 +57,8 @@ namespace parking_management
 
 					dateTimePicker1.Text = dt1.Rows[0]["EntryTime"].ToString();
 
-					comboBox1.Text = dt1.Rows[0]["slot"].ToString();
+					//comboBox1.Text = dt1.Rows[0]["slot"].ToString();
+					tbxVehicleNumber.Text = dt1.Rows[0]["VehicleNumber"].ToString();
 				}
 				else
 				{
@@ -87,7 +88,8 @@ namespace parking_management
 
 					dateTimePicker1.Text = dt.Rows[0]["EntryTime"].ToString();
 
-					comboBox1.Text = dt.Rows[0]["slot"].ToString();
+					//comboBox1.Text = dt.Rows[0]["slot"].ToString();
+					tbxVehicleNumber.Text = dt.Rows[0]["VehicleNumber"].ToString();
 				}
 				else
 				{
@@ -101,7 +103,7 @@ namespace parking_management
         private void button2_Click(object sender, EventArgs e) // update button
 		{
             if (textBox1.Text == "" || dateTimePicker1.Text == "" ||
-         comboBox1.Text == "" || textBox4.Text == "")
+         tbxVehicleNumber.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("Please Fill All Fields");
             }
@@ -112,7 +114,7 @@ namespace parking_management
 
                 con.Open();
 
-                string query = "UPDATE Parking SET ownername = @u, EntryTime = @e, slot = @s, ExitTime = NULL, TotalCost = NULL, status = NULL WHERE VehicleNumber = @v";
+                string query = "UPDATE Parking SET ownername = @u, VehicleNumber = @vn, EntryTime = @e, ExitTime = NULL, TotalCost = NULL, status = NULL WHERE VehicleNumber = @v";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -123,7 +125,7 @@ namespace parking_management
                 cmd.Parameters.AddWithValue("@e", dateTimePicker1.Value);
 
                 // SLOT
-                cmd.Parameters.AddWithValue("@s", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@vn", tbxVehicleNumber.Text);
 
                 // SEARCH VEHICLE
                 cmd.Parameters.AddWithValue("@v", textBox4.Text);
