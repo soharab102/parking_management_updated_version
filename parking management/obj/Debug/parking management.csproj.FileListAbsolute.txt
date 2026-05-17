@@ -269,3 +269,7 @@ K:\C#\Final Project\Final Version\parking management\parking management\parking 
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking management.exe
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking management.pdb
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\obj\Debug\parking_management.admin.resources
+K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\BouncyCastle.Cryptography.dll
+K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\itextsharp.dll
+K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\BouncyCastle.Cryptography.xml
+K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\itextsharp.xml

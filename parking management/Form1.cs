@@ -5,6 +5,11 @@ using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using PdfFont = iTextSharp.text.Font; // Add this using directive at the top of the file to alias iTextSharp.text.Font
 namespace parking_management
 {
     public partial class Form1 : Form
@@ -44,16 +49,25 @@ namespace parking_management
             listBox1.Items.Clear();
             string query = @"SELECT VehicleNumber
                      FROM Parking
-                     WHERE (status='not paid' OR status IS NULL)
+                     WHERE (status='not paid' OR status IS NULL) AND username = @u
                      AND VehicleNumber LIKE @v
                      ORDER BY EntryTime DESC";
+
+            if(username == "admin")
+			{
+				query = @"SELECT VehicleNumber
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) 
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
 
 			using (SqlConnection con = new SqlConnection(conStr))
 			{
 				SqlCommand cmd = new SqlCommand(query, con);
 
 				cmd.Parameters.AddWithValue("@v", "%" + textBox1.Text + "%");
-
+                cmd.Parameters.AddWithValue("@u", username);
 				con.Open();
 
 				SqlDataReader dr = cmd.ExecuteReader();
@@ -181,9 +195,6 @@ namespace parking_management
 
 				cmd.ExecuteNonQuery();
 
-                //MessageBox.Show("Payment Successful!");
-
-
 
                 // Refresh Grid
                 string refreshQuery = @"SELECT TOP 1 *
@@ -202,9 +213,20 @@ namespace parking_management
                 dataGridView1.DataSource = dt;
             }
 
-			DialogResult result = MessageBox.Show("Payment successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if(result == DialogResult.OK)
-            {
+
+			DialogResult result = MessageBox.Show(
+					 "Payment Successful!\nDo you want to print receipt?",
+					"Payment",
+					  MessageBoxButtons.YesNo,
+						MessageBoxIcon.Information);
+
+			if (result == DialogResult.Yes)
+			{
+				GeneratePDF();
+			}
+			if (result == DialogResult.No)
+			{
+
 				if(username == "admin")
 			    {
 					admin ad = new admin();
@@ -219,14 +241,116 @@ namespace parking_management
 
 				this.Hide();
 				//this.Close();
-
 			}
 
 
 		}
 
+        // Generate PDF Function
+        private void GeneratePDF()
+        {
+            SaveFileDialog sfd = new SaveFileDialog(); // creates save as dialog box
 
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+            sfd.Filter = "PDF files (*.pdf)|*.pdf"; // user can only save as PDF
+            sfd.FileName = "ParkingReceipt.pdf";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Document doc = new Document(PageSize.A4); // create virtual doc
+
+                PdfWriter.GetInstance(doc,
+                    new FileStream(sfd.FileName, FileMode.Create)); // convert virtual doc to real and save
+
+                doc.Open();
+
+                // TITLE
+                Paragraph title = new Paragraph("PARKING PAYMENT RECEIPT");
+
+                title.Alignment = Element.ALIGN_CENTER;
+                title.SpacingAfter = 20f;
+
+                doc.Add(title);
+
+                // TABLE
+                PdfPTable table = new PdfPTable(2);
+
+                table.WidthPercentage = 100;
+
+                // USER NAME
+                table.AddCell("User Name");
+                table.AddCell(
+                    dataGridView1.Rows[0]
+                    .Cells["username"]
+                    .Value.ToString());
+
+                // Owner Name
+                table.AddCell("Owner Name");
+                table.AddCell(
+                    dataGridView1.Rows[0]
+                    .Cells["ownername"]
+                    .Value.ToString());
+
+                // VEHICLE NO
+                table.AddCell("Vehicle No");
+                table.AddCell(textBox1.Text);
+
+                // SLOT
+                table.AddCell("Parking Slot");
+                table.AddCell(
+                    dataGridView1.Rows[0]
+                    .Cells["slot"]
+                    .Value.ToString());
+
+                // ENTRY TIME
+                table.AddCell("Entry Time");
+                table.AddCell(
+                    Convert.ToDateTime(
+                        dataGridView1.Rows[0]
+                        .Cells["EntryTime"]
+                        .Value)
+                    .ToString("dd MMM yyyy hh:mm tt"));
+
+                // EXIT TIME
+                table.AddCell("Exit Time");
+                table.AddCell(
+                    dateTimePicker1.Value.ToString(
+                        "dd MMM yyyy hh:mm tt"));
+
+                // PAYMENT METHOD
+                table.AddCell("Payment Method");
+                table.AddCell(comboBox1.Text);
+
+                // TOTAL COST
+                table.AddCell("Total Cost");
+                table.AddCell(textBoxTotalCost.Text + " TK");
+
+                // PAYMENT DATE
+                table.AddCell("Payment Date");
+                table.AddCell(
+                    DateTime.Now.ToString(
+                        "dd MMM yyyy hh:mm tt"));
+
+                doc.Add(table);
+
+                // FOOTER
+                Paragraph p = new Paragraph(
+                    "\nThank You For Using Our Parking System");
+
+                p.Alignment = Element.ALIGN_CENTER;
+
+                doc.Add(p);
+
+                doc.Close();
+
+                MessageBox.Show("PDF Saved Successfully!");
+
+            }
+        }
+
+
+
+		// DateTimePicker value changed to set custom format
+		private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             // Cast sender to DateTimePicker before accessing Format and CustomFormat
             DateTimePicker picker = sender as DateTimePicker;
@@ -349,6 +473,14 @@ namespace parking_management
                 textBox1.Text = "  e.g DHA-2626";
                 textBox1.ForeColor = Color.Gray;
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                textBox1.Text = listBox1.SelectedItem.ToString();
+			}
         }
 	}
 }

@@ -46,10 +46,10 @@
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -271,6 +271,17 @@
 			this.panel4.Size = new System.Drawing.Size(996, 622);
 			this.panel4.TabIndex = 9;
 			// 
+			// listBox1
+			// 
+			this.listBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 15;
+			this.listBox1.Location = new System.Drawing.Point(180, 139);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(605, 49);
+			this.listBox1.TabIndex = 11;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -302,16 +313,6 @@
 			this.label2.Size = new System.Drawing.Size(325, 43);
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Parking Management System";
-			// 
-			// listBox1
-			// 
-			this.listBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 15;
-			this.listBox1.Location = new System.Drawing.Point(180, 139);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(605, 49);
-			this.listBox1.TabIndex = 11;
 			// 
 			// Form1
 			// 
