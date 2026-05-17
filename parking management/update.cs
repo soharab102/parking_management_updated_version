@@ -15,7 +15,9 @@ namespace parking_management
     public partial class update : Form
     {
         public  string username;
-        string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+		public dashboard ParentDashboard { get; set; }
+		public admin ParentAdmin { get; set; }
+		string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public update()
         {
@@ -24,19 +26,14 @@ namespace parking_management
 
         private void update_Load(object sender, EventArgs e)
         {
-            //comboBox1.Items.Add("A");
-            //comboBox1.Items.Add("B");
-            //comboBox1.Items.Add("C");
-            //comboBox1.Items.Add("D");
-            //comboBox1.Items.Add("E");
-        }
+			listBox1.Visible = false;
+		}
 
         private void button1_Click(object sender, EventArgs e) // search button
 		{
             SqlConnection con = new SqlConnection(cs);
             if(username == "admin")
 			{
-
 				string adminQquery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
 
 				SqlDataAdapter da1 = new SqlDataAdapter(adminQquery, con);
@@ -67,13 +64,13 @@ namespace parking_management
 				
 			}
             else{
-				string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND username = @u";
+				string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND username = @usr";
 
 				SqlDataAdapter da = new SqlDataAdapter(query, con);
 
 				// SEARCH TEXTBOX
 				da.SelectCommand.Parameters.AddWithValue("@v", textBox4.Text);
-				da.SelectCommand.Parameters.AddWithValue("@u", username);
+				da.SelectCommand.Parameters.AddWithValue("@usr", username);
 
 				DataTable dt = new DataTable();
 
@@ -90,6 +87,9 @@ namespace parking_management
 
 					//comboBox1.Text = dt.Rows[0]["slot"].ToString();
 					tbxVehicleNumber.Text = dt.Rows[0]["VehicleNumber"].ToString();
+
+					// Hide listbox after selection
+					listBox1.Visible = false;
 				}
 				else
 				{
@@ -132,10 +132,46 @@ namespace parking_management
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Data Updated Successfully");
+				DialogResult result = MessageBox.Show(
+					"Data Updated Successfully",
+					"Data Updated",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Information);
 
-                // SHOW UPDATED DATA
-                string showQuery = "SELECT * FROM Parking WHERE VehicleNumber=@v";
+				if (result == DialogResult.OK)
+				{
+					if (username == "admin")
+					{
+						if (ParentAdmin != null)
+						{
+							ParentAdmin.Show(); // reuse existing instance
+						}
+						else
+						{
+							admin ad = new admin();
+							ad.username = username;
+							ad.Show();
+						}
+					}
+					else
+					{
+						if (ParentDashboard != null)
+						{
+							ParentDashboard.Show(); // reuse existing instance
+						}
+						else
+						{
+							dashboard d = new dashboard();
+							d.username = username;
+							d.Show();
+						}
+					}
+
+					this.Hide();
+				}
+
+				// SHOW UPDATED DATA
+				string showQuery = "SELECT * FROM Parking WHERE VehicleNumber=@v";
 
                 SqlDataAdapter da = new SqlDataAdapter(showQuery, con);
 
@@ -157,18 +193,105 @@ namespace parking_management
         {
 			if (username == "admin")
 			{
-				admin ad = new admin();
-				ad.Show();
-				this.Hide();
-				return;
+				if (ParentAdmin != null)
+				{
+					ParentAdmin.Show(); // reuse existing instance
+				}
+				else
+				{
+					admin ad = new admin();
+					ad.username = username;
+					ad.Show();
+				}
 			}
-			dashboard d = new dashboard();
-			d.username = username;
-
-			d.Show();
+			else
+			{
+				if (ParentDashboard != null)
+				{
+					ParentDashboard.Show(); // reuse existing instance
+				}
+				else
+				{
+					dashboard d = new dashboard();
+					d.username = username;
+					d.Show();
+				}
+			}
 
 			this.Hide();
-			//this.Close();
+		}
+
+		private void textBox4_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox4.Text == "")
+			{
+				// clear listbox and hide
+				listBox1.Items.Clear();
+				listBox1.Visible = false;
+				return;
+
+			}
+
+			// show listbox
+			listBox1.Visible = true;
+			listBox1.Items.Clear();
+
+			string query = "";
+
+			if (username == "admin")
+			{
+				query = @"SELECT VehicleNumber, ownername
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) 
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
+			else
+			{
+				query = @"SELECT VehicleNumber, ownername
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) AND username = @u
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
+
+			using (SqlConnection con = new SqlConnection(cs))
+			{
+				SqlCommand cmd = new SqlCommand(query, con);
+
+				cmd.Parameters.AddWithValue("@v", "%" + textBox4.Text + "%");
+				if (username != "admin")
+				{
+					cmd.Parameters.AddWithValue("@u", username);
+				}
+				con.Open();
+
+				SqlDataReader dr = cmd.ExecuteReader();
+
+				while (dr.Read())
+				{
+					listBox1.Items.Add(
+						dr["VehicleNumber"].ToString() + " - " + dr["ownername"].ToString()
+					);
+				}
+			}
+
+			if (listBox1.Items.Count > 0)
+			{
+				listBox1.Visible = true;
+			}
+			else
+			{
+				listBox1.Visible = false;
+			}
+		}
+
+		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listBox1.SelectedItem != null)
+			{
+				textBox1.Text = listBox1.SelectedItem.ToString();
+			}
 		}
 	}
 }

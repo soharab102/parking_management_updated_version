@@ -15,9 +15,11 @@ namespace parking_management
     public partial class Form1 : Form
     {
         public string username;
+		public dashboard ParentDashboard { get; set; }
+		public admin ParentAdmin { get; set; }
 
-        bool isPlaceholder = true;
-        string conStr = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+		bool isPlaceholder = true;
+        string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         private DateTimePicker timePicker;
 
         public Form1()
@@ -47,27 +49,34 @@ namespace parking_management
 			// show listbox
             listBox1.Visible = true;
             listBox1.Items.Clear();
-            string query = @"SELECT VehicleNumber
-                     FROM Parking
-                     WHERE (status='not paid' OR status IS NULL) AND username = @u
-                     AND VehicleNumber LIKE @v
-                     ORDER BY EntryTime DESC";
 
+            string query = "";
+            
             if(username == "admin")
 			{
-				query = @"SELECT VehicleNumber
+				query = @"SELECT VehicleNumber, ownername
                      FROM Parking
                      WHERE (status='not paid' OR status IS NULL) 
                      AND VehicleNumber LIKE @v
                      ORDER BY EntryTime DESC";
 			}
+            else{
+				query = @"SELECT VehicleNumber, ownername
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) AND username = @u
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
 
-			using (SqlConnection con = new SqlConnection(conStr))
+			using (SqlConnection con = new SqlConnection(cs))
 			{
 				SqlCommand cmd = new SqlCommand(query, con);
 
 				cmd.Parameters.AddWithValue("@v", "%" + textBox1.Text + "%");
-                cmd.Parameters.AddWithValue("@u", username);
+                if(username!= "admin")
+                {
+                    cmd.Parameters.AddWithValue("@u", username);
+                }
 				con.Open();
 
 				SqlDataReader dr = cmd.ExecuteReader();
@@ -75,7 +84,7 @@ namespace parking_management
 				while (dr.Read())
 				{
 					listBox1.Items.Add(
-						dr["VehicleNumber"].ToString()
+						dr["VehicleNumber"].ToString() + " - " + dr["ownername"].ToString()
 					);
 				}
 			}
@@ -95,7 +104,7 @@ namespace parking_management
         {
             string vehicle = textBox1.Text.ToUpper();
 
-            using (SqlConnection con = new SqlConnection(conStr))
+            using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
 
@@ -135,7 +144,7 @@ namespace parking_management
         {
             string vehicle = textBox1.Text.ToUpper();
 
-            using (SqlConnection con = new SqlConnection(conStr))
+            using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
 
@@ -164,7 +173,7 @@ namespace parking_management
 			// Update DB exit time
 			UpdateExitTime();
 
-			using (SqlConnection con = new SqlConnection(conStr))
+			using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
 
@@ -342,9 +351,30 @@ namespace parking_management
 
                 doc.Close();
 
-                MessageBox.Show("PDF Saved Successfully!");
+				DialogResult result = MessageBox.Show(
+					"Receipt saved successfully!",
+					"Receipt Saved",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Information);    
 
-            }
+                if(result == DialogResult.OK)
+                {
+					if(username == "admin")
+			        {
+						admin ad = new admin();
+						ad.Show();
+						this.Hide();
+						return;
+					}
+					dashboard d = new dashboard();
+					d.username = username;
+
+					d.Show();
+
+					this.Hide();
+					//this.Close();
+				}
+			}
         }
 
 
@@ -352,12 +382,12 @@ namespace parking_management
 		// DateTimePicker value changed to set custom format
 		private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            // Cast sender to DateTimePicker before accessing Format and CustomFormat
+            // Cast DateTimePicker before accessing Format
             DateTimePicker picker = sender as DateTimePicker;
             if (picker != null)
             {
                 picker.Format = DateTimePickerFormat.Custom;
-                picker.CustomFormat = "hh:mm:ss tt"; // 12-hour format with seconds
+                picker.CustomFormat = "hh:mm:ss tt"; // 12 hr format with seconds
             }
         }
         private void calculate_Click(object sender, EventArgs e)
@@ -366,7 +396,7 @@ namespace parking_management
 
             confirm.Enabled = true; // Enable confirm button when calculate is clicked
 
-			using (SqlConnection con = new SqlConnection(conStr))
+			using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
 
@@ -442,18 +472,32 @@ namespace parking_management
         {
 			if (username == "admin")
 			{
-				admin ad = new admin();
-				ad.Show();
-				this.Hide();
-				return;
+				if (ParentAdmin != null)
+				{
+					ParentAdmin.Show(); // reuse existing instance
+				}
+				else
+				{
+					admin ad = new admin();
+					ad.username = username;
+					ad.Show();
+				}
 			}
-			dashboard d = new dashboard();
-			d.username = username;
-
-			d.Show();
+			else
+			{
+				if (ParentDashboard != null)
+				{
+					ParentDashboard.Show(); // reuse existing instance
+				}
+				else
+				{
+					dashboard d = new dashboard();
+					d.username = username;
+					d.Show();
+				}
+			}
 
 			this.Hide();
-			//this.Close();
 		}
 
 		// Placeholder text handling for search box
@@ -475,7 +519,8 @@ namespace parking_management
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+		// copy the suggestion to the search box when user clicks on the suggestion item in listbox
+		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
             {

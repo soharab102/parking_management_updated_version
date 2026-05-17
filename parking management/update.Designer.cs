@@ -34,6 +34,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.lblVehicleNumber = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.tbxVehicleNumber = new System.Windows.Forms.TextBox();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBox4 = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
-			this.tbxVehicleNumber = new System.Windows.Forms.TextBox();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -118,11 +119,20 @@
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.textBox1);
 			this.panel1.Controls.Add(this.label2);
-			this.panel1.Location = new System.Drawing.Point(188, 267);
+			this.panel1.Location = new System.Drawing.Point(190, 314);
 			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(635, 198);
 			this.panel1.TabIndex = 3;
+			// 
+			// tbxVehicleNumber
+			// 
+			this.tbxVehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbxVehicleNumber.Location = new System.Drawing.Point(162, 129);
+			this.tbxVehicleNumber.Multiline = true;
+			this.tbxVehicleNumber.Name = "tbxVehicleNumber";
+			this.tbxVehicleNumber.Size = new System.Drawing.Size(220, 30);
+			this.tbxVehicleNumber.TabIndex = 5;
 			// 
 			// dateTimePicker1
 			// 
@@ -153,6 +163,7 @@
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(280, 27);
 			this.textBox4.TabIndex = 1;
+			this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
 			// 
 			// button1
 			// 
@@ -172,7 +183,7 @@
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(188, 196);
+			this.dataGridView1.Location = new System.Drawing.Point(190, 243);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
@@ -185,7 +196,7 @@
 			this.button2.BackColor = System.Drawing.Color.DarkGreen;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.button2.Location = new System.Drawing.Point(535, 496);
+			this.button2.Location = new System.Drawing.Point(537, 543);
 			this.button2.Margin = new System.Windows.Forms.Padding(2);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(131, 41);
@@ -199,7 +210,7 @@
 			this.button3.BackColor = System.Drawing.Color.Gray;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-			this.button3.Location = new System.Drawing.Point(337, 496);
+			this.button3.Location = new System.Drawing.Point(339, 543);
 			this.button3.Margin = new System.Windows.Forms.Padding(2);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(125, 41);
@@ -211,6 +222,7 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.DarkGray;
+			this.panel2.Controls.Add(this.listBox1);
 			this.panel2.Controls.Add(this.label8);
 			this.panel2.Controls.Add(this.dataGridView1);
 			this.panel2.Controls.Add(this.button2);
@@ -230,7 +242,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(185, 171);
+			this.label8.Location = new System.Drawing.Point(187, 218);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(144, 20);
 			this.label8.TabIndex = 6;
@@ -258,14 +270,16 @@
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Parking Management System";
 			// 
-			// tbxVehicleNumber
+			// listBox1
 			// 
-			this.tbxVehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tbxVehicleNumber.Location = new System.Drawing.Point(162, 129);
-			this.tbxVehicleNumber.Multiline = true;
-			this.tbxVehicleNumber.Name = "tbxVehicleNumber";
-			this.tbxVehicleNumber.Size = new System.Drawing.Size(220, 30);
-			this.tbxVehicleNumber.TabIndex = 5;
+			this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 16;
+			this.listBox1.Location = new System.Drawing.Point(371, 137);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(283, 52);
+			this.listBox1.TabIndex = 7;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
 			// 
 			// update
 			// 
@@ -311,5 +325,6 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private System.Windows.Forms.TextBox tbxVehicleNumber;
+		private System.Windows.Forms.ListBox listBox1;
 	}
 }

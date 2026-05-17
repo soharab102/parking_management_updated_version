@@ -14,6 +14,10 @@ namespace parking_management
 	public partial class delete : Form
 	{
 		public string username;
+
+		public dashboard ParentDashboard { get; set; }
+		public admin ParentAdmin { get; set; }
+
 		// string cs = @"Data Source=YOUR_SERVER_NAME;Initial Catalog=YOUR_DATABASE_NAME;Integrated Security=True";
 		string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
@@ -44,6 +48,10 @@ namespace parking_management
 				if (dt1.Rows.Count <= 0)
 				{
 					MessageBox.Show("Vehicle Not Found");
+				}
+				else{
+					// Hide listbox after selection
+					listBox1.Visible = false;
 				}
 				return;
 			}
@@ -134,20 +142,114 @@ namespace parking_management
 
 		private void button2_Click(object sender, EventArgs e) // back button
 		{
-			if(username == "admin")
+			if (username == "admin")
 			{
-				admin ad = new admin();
-				ad.Show();
-				this.Hide();
-				return;
+				if (ParentAdmin != null)
+				{
+					ParentAdmin.Show(); // reuse existing instance
+				}
+				else
+				{
+					admin ad = new admin();
+					ad.username = username;
+					ad.Show();
+				}
 			}
-			dashboard d = new dashboard();
-			d.username = username;
-
-			d.Show();
+			else
+			{
+				if (ParentDashboard != null)
+				{
+					ParentDashboard.Show(); // reuse existing instance
+				}
+				else
+				{
+					dashboard d = new dashboard();
+					d.username = username;
+					d.Show();
+				}
+			}
 
 			this.Hide();
-			//this.Close();
+		
+
+		}
+
+		private void delete_Load(object sender, EventArgs e)
+		{
+			listBox1.Visible = false;
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox1.Text == "")
+			{
+				// clear listbox and hide
+				listBox1.Items.Clear();
+				listBox1.Visible = false;
+				return;
+
+			}
+
+			// show listbox
+			listBox1.Visible = true;
+			listBox1.Items.Clear();
+
+			string query = "";
+
+			if (username == "admin")
+			{
+				query = @"SELECT VehicleNumber, ownername
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) 
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
+			else
+			{
+				query = @"SELECT VehicleNumber, ownername
+                     FROM Parking
+                     WHERE (status='not paid' OR status IS NULL) AND username = @u
+                     AND VehicleNumber LIKE @v
+                     ORDER BY EntryTime DESC";
+			}
+
+			using (SqlConnection con = new SqlConnection(cs))
+			{
+				SqlCommand cmd = new SqlCommand(query, con);
+
+				cmd.Parameters.AddWithValue("@v", "%" + textBox1.Text + "%");
+				if (username != "admin")
+				{
+					cmd.Parameters.AddWithValue("@u", username);
+				}
+				con.Open();
+
+				SqlDataReader dr = cmd.ExecuteReader();
+
+				while (dr.Read())
+				{
+					listBox1.Items.Add(
+						dr["VehicleNumber"].ToString() + " - " + dr["ownername"].ToString()
+					);
+				}
+			}
+
+			if (listBox1.Items.Count > 0)
+			{
+				listBox1.Visible = true;
+			}
+			else
+			{
+				listBox1.Visible = false;
+			}
+		}
+
+		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listBox1.SelectedItem != null)
+			{
+				textBox1.Text = listBox1.SelectedItem.ToString();
+			}
 		}
 	}
 }

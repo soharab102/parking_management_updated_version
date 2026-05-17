@@ -15,7 +15,9 @@ namespace parking_management
     public partial class add : Form
     {
         public string username;
-        private DateTimePicker timePicker;
+		public dashboard ParentDashboard { get; set; }
+		public admin ParentAdmin { get; set; }
+		private DateTimePicker timePicker;
 
         string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         public add()
@@ -139,18 +141,32 @@ namespace parking_management
         {
 			if (username == "admin")
 			{
-				admin ad = new admin();
-				ad.Show();
-				this.Hide();
-				return;
+				if (ParentAdmin != null)
+				{
+					ParentAdmin.Show(); // reuse existing instance
+				}
+				else
+				{
+					admin ad = new admin();
+					ad.username = username;
+					ad.Show();
+				}
 			}
-			dashboard d = new dashboard();
-			d.username = username;
-
-			d.Show();
+			else
+			{
+				if (ParentDashboard != null)
+				{
+					ParentDashboard.Show(); // reuse existing instance
+				}
+				else
+				{
+					dashboard d = new dashboard();
+					d.username = username;
+					d.Show();
+				}
+			}
 
 			this.Hide();
-			//this.Close();
 		}
 
 		private void add_Load(object sender, EventArgs e)

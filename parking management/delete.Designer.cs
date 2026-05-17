@@ -40,6 +40,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label5 = new System.Windows.Forms.Label();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -55,6 +56,7 @@
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(449, 41);
 			this.textBox1.TabIndex = 0;
+			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
 			// label1
 			// 
@@ -73,7 +75,7 @@
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(24, 177);
+			this.dataGridView1.Location = new System.Drawing.Point(30, 246);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
@@ -86,7 +88,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(21, 145);
+			this.label2.Location = new System.Drawing.Point(27, 214);
 			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(246, 25);
@@ -112,7 +114,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-			this.label3.Location = new System.Drawing.Point(277, 296);
+			this.label3.Location = new System.Drawing.Point(283, 365);
 			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(407, 20);
@@ -124,7 +126,7 @@
 			this.button2.BackColor = System.Drawing.Color.Red;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-			this.button2.Location = new System.Drawing.Point(352, 342);
+			this.button2.Location = new System.Drawing.Point(358, 411);
 			this.button2.Margin = new System.Windows.Forms.Padding(2);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(112, 38);
@@ -138,7 +140,7 @@
 			this.button3.BackColor = System.Drawing.Color.DarkGreen;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.button3.Location = new System.Drawing.Point(503, 342);
+			this.button3.Location = new System.Drawing.Point(509, 411);
 			this.button3.Margin = new System.Windows.Forms.Padding(2);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(110, 38);
@@ -150,6 +152,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.LightGray;
+			this.panel1.Controls.Add(this.listBox1);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.button3);
 			this.panel1.Controls.Add(this.button2);
@@ -197,6 +200,17 @@
 			this.label5.TabIndex = 0;
 			this.label5.Text = "Parking Management System";
 			// 
+			// listBox1
+			// 
+			this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 16;
+			this.listBox1.Location = new System.Drawing.Point(30, 105);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(449, 68);
+			this.listBox1.TabIndex = 6;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+			// 
 			// delete
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +224,7 @@
 			this.Name = "delete";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "delete";
+			this.Load += new System.EventHandler(this.delete_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
@@ -234,5 +249,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-    }
+		private System.Windows.Forms.ListBox listBox1;
+	}
 }

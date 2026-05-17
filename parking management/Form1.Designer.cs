@@ -278,7 +278,7 @@
 			this.listBox1.ItemHeight = 15;
 			this.listBox1.Location = new System.Drawing.Point(180, 139);
 			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(605, 49);
+			this.listBox1.Size = new System.Drawing.Size(605, 79);
 			this.listBox1.TabIndex = 11;
 			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
 			// 

@@ -70,8 +70,8 @@ namespace parking_management
         private void button3_Click(object sender, EventArgs e)//delete booking
         {
             delete d = new delete();
-
-            d.username = username;
+			d.ParentAdmin = this;
+			d.username = username;
             d.Show();
 
            this.Hide();
@@ -96,11 +96,11 @@ namespace parking_management
         {
             SqlConnection con = new SqlConnection(cs);
 
-            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) OR UPPER(OwnerName)=UPPER(@v)";
+            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber) LIKE UPPER(@v) OR UPPER(ownername) LIKE UPPER(@v)";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
 
-            da.SelectCommand.Parameters.AddWithValue("@v", textBox1.Text);
+            da.SelectCommand.Parameters.AddWithValue("@v", "%" + textBox1.Text + "%");
 
             DataTable dt = new DataTable();
 
