@@ -23,11 +23,32 @@ namespace parking_management
 			InitializeComponent();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e) // search button
 		{
 			SqlConnection con = new SqlConnection(cs);
 
-			string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND username = @u";
+			if(username == "admin")
+			{
+				string adminQuery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
+				SqlDataAdapter da1 = new SqlDataAdapter(adminQuery, con);
+
+				da1.SelectCommand.Parameters.AddWithValue("@v", textBox1.Text);
+				da1.SelectCommand.Parameters.AddWithValue("@u", username);
+
+				DataTable dt1 = new DataTable();
+
+				da1.Fill(dt1);
+
+				dataGridView1.DataSource = dt1;
+
+				if (dt1.Rows.Count <= 0)
+				{
+					MessageBox.Show("Vehicle Not Found");
+				}
+				return;
+			}
+
+			string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND username = @u ";
 
 			SqlDataAdapter da = new SqlDataAdapter(query, con);
 

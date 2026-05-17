@@ -214,7 +214,7 @@
 			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-			this.label3.Location = new System.Drawing.Point(123, 5);
+			this.label3.Location = new System.Drawing.Point(111, 0);
 			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(265, 62);
@@ -227,7 +227,7 @@
 			this.label4.BackColor = System.Drawing.Color.Transparent;
 			this.label4.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-			this.label4.Location = new System.Drawing.Point(61, 62);
+			this.label4.Location = new System.Drawing.Point(49, 57);
 			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(410, 62);
@@ -241,7 +241,7 @@
 			this.label5.Cursor = System.Windows.Forms.Cursors.Default;
 			this.label5.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-			this.label5.Location = new System.Drawing.Point(132, 121);
+			this.label5.Location = new System.Drawing.Point(120, 116);
 			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(244, 62);

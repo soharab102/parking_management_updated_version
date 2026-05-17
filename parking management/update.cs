@@ -31,41 +31,75 @@ namespace parking_management
             comboBox1.Items.Add("E");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) // search button
+		{
             SqlConnection con = new SqlConnection(cs);
+            if(username == "admin")
+			{
 
-            string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
+				string adminQquery = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v)";
 
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
+				SqlDataAdapter da1 = new SqlDataAdapter(adminQquery, con);
 
-            // SEARCH TEXTBOX
-            da.SelectCommand.Parameters.AddWithValue("@v", textBox4.Text);
+				// SEARCH TEXTBOX
+				da1.SelectCommand.Parameters.AddWithValue("@v", textBox4.Text);
 
-            DataTable dt = new DataTable();
+				DataTable dt1 = new DataTable();
 
-            da.Fill(dt);
+				da1.Fill(dt1);
 
-            dataGridView1.DataSource = dt;
+				dataGridView1.DataSource = dt1;
 
-            if (dt.Rows.Count > 0)
-            {
-                // SHOW DATA IN UPDATE FIELDS
-                textBox1.Text = dt.Rows[0]["ownername"].ToString();
+				if (dt1.Rows.Count > 0)
+				{
+					// SHOW DATA IN UPDATE FIELDS
+					textBox1.Text = dt1.Rows[0]["ownername"].ToString();
 
-                dateTimePicker1.Text = dt.Rows[0]["EntryTime"].ToString();
+					dateTimePicker1.Text = dt1.Rows[0]["EntryTime"].ToString();
 
-                comboBox1.Text = dt.Rows[0]["slot"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Vehicle Not Found");
-            }
+					comboBox1.Text = dt1.Rows[0]["slot"].ToString();
+				}
+				else
+				{
+					MessageBox.Show("Vehicle Not Found");
+				}
+				
+			}
+            else{
+				string query = "SELECT * FROM Parking WHERE UPPER(VehicleNumber)=UPPER(@v) AND username = @u";
+
+				SqlDataAdapter da = new SqlDataAdapter(query, con);
+
+				// SEARCH TEXTBOX
+				da.SelectCommand.Parameters.AddWithValue("@v", textBox4.Text);
+				da.SelectCommand.Parameters.AddWithValue("@u", username);
+
+				DataTable dt = new DataTable();
+
+				da.Fill(dt);
+
+				dataGridView1.DataSource = dt;
+
+				if (dt.Rows.Count > 0)
+				{
+					// SHOW DATA IN UPDATE FIELDS
+					textBox1.Text = dt.Rows[0]["ownername"].ToString();
+
+					dateTimePicker1.Text = dt.Rows[0]["EntryTime"].ToString();
+
+					comboBox1.Text = dt.Rows[0]["slot"].ToString();
+				}
+				else
+				{
+					MessageBox.Show("Vehicle Not Found");
+				}
+			}
+
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e) // update button
+		{
             if (textBox1.Text == "" || dateTimePicker1.Text == "" ||
          comboBox1.Text == "" || textBox4.Text == "")
             {
@@ -86,7 +120,7 @@ namespace parking_management
                 cmd.Parameters.AddWithValue("@u", textBox1.Text);
 
                 // ENTRY TIME
-                cmd.Parameters.AddWithValue("@e", dateTimePicker1.Text);
+                cmd.Parameters.AddWithValue("@e", dateTimePicker1.Value);
 
                 // SLOT
                 cmd.Parameters.AddWithValue("@s", comboBox1.Text);
@@ -104,6 +138,7 @@ namespace parking_management
                 SqlDataAdapter da = new SqlDataAdapter(showQuery, con);
 
                 da.SelectCommand.Parameters.AddWithValue("@v", textBox4.Text);
+                da.SelectCommand.Parameters.AddWithValue("@u", username);
 
                 DataTable dt = new DataTable();
 
