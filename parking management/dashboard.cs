@@ -15,7 +15,7 @@ namespace parking_management
     public partial class dashboard : Form
     {
         public string username;
-        string cs= @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string cs= @"Data Source=SOHARAB\SQLEXPRESS;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         private Label labelUsername;
 
         public dashboard()

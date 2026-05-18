@@ -19,7 +19,7 @@ namespace parking_management
 		public admin ParentAdmin { get; set; }
 
 		// string cs = @"Data Source=YOUR_SERVER_NAME;Initial Catalog=YOUR_DATABASE_NAME;Integrated Security=True";
-		string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+		string cs = @"Data Source=SOHARAB\SQLEXPRESS;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
 		public delete()

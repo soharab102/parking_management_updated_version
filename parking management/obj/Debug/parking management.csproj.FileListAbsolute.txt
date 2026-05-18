@@ -273,3 +273,98 @@ K:\C#\Final Project\Final Version\parking management\parking management\parking 
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\itextsharp.dll
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\BouncyCastle.Cryptography.xml
 K:\C#\Final Project\Final Version\parking management\parking management\parking management\bin\Debug\itextsharp.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\parking management.exe.config
+E:\C#\parking management 2.0\parking management\bin\Debug\parking management.exe
+E:\C#\parking management 2.0\parking management\bin\Debug\parking management.pdb
+E:\C#\parking management 2.0\parking management\bin\Debug\BouncyCastle.Cryptography.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\itextsharp.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.Cryptography.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Options.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Primitives.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Logging.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Buffers.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.IO.Pipelines.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Memory.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Numerics.Vectors.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Security.Cryptography.Pkcs.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Text.Encodings.Web.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Text.Json.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Threading.Channels.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\BouncyCastle.Cryptography.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\itextsharp.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.Cryptography.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Options.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.Extensions.Primitives.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Logging.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Buffers.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.IO.Pipelines.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Memory.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Numerics.Vectors.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Security.Cryptography.Pkcs.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Text.Encodings.Web.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Text.Json.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Threading.Channels.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\C#\parking management 2.0\parking management\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\C#\parking management 2.0\parking management\obj\Debug\parking management.csproj.AssemblyReference.cache
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.add.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.admin.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.dashboard.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.delete.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.Form1.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.login.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.Properties.Resources.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.register.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking_management.update.resources
+E:\C#\parking management 2.0\parking management\obj\Debug\parking management.csproj.GenerateResource.cache
+E:\C#\parking management 2.0\parking management\obj\Debug\parking management.csproj.CoreCompileInputs.cache
+E:\C#\parking management 2.0\parking management\obj\Debug\parking .54C6CBDD.Up2Date
+E:\C#\parking management 2.0\parking management\obj\Debug\parking management.exe
+E:\C#\parking management 2.0\parking management\obj\Debug\parking management.pdb

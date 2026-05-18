@@ -19,7 +19,7 @@ namespace parking_management
 		public admin ParentAdmin { get; set; }
 
 		bool isPlaceholder = true;
-        string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string cs = @"Data Source=SOHARAB\SQLEXPRESS;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         private DateTimePicker timePicker;
 
         public Form1()

@@ -13,7 +13,7 @@ namespace parking_management
 {
     public partial class register : Form
     {
-        readonly string cs = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        readonly string cs = @"Data Source=SOHARAB\SQLEXPRESS;Initial Catalog=userDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         public register()
         {
             InitializeComponent();
