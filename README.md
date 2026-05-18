@@ -67,10 +67,6 @@ parking management/
 └── parking management.sln
 ```
 
-## Contributors
-
-* Soharab
-* Team Members
 
 ## License
 
