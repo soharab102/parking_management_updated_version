@@ -68,7 +68,6 @@ parking management/
 ```
 ## Contributors
   1)Soharab
-  2)Chinmoy
 
 ---
 
